@@ -1,15 +1,34 @@
-Paste this as your root `README.md`.
-
-````md
 # 5010 3-DOF FOC Kinematic Chain
 
-A reusable three-joint serial FOC platform for legged-robotics and manipulation research.
+> A reusable three-joint serial FOC platform for legged-robotics and manipulation research.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Hardware: STM32](https://img.shields.io/badge/Hardware-STM32-03234B.svg)](STM32-H723/)
+[![ROS 2](https://img.shields.io/badge/ROS%202-RViz-22314E.svg)](linux/leg_ros2_rviz/)
 
 This project demonstrates a complete hardware-to-ROS 2 control path: distributed CAN FOC actuators, independent output-joint encoders, STM32H723 real-time safety control, Cartesian inverse kinematics, and live ROS 2 / RViz monitoring.
 
-![5010 3-DOF FOC kinematic chain hardware and RViz model](Image/image.png)
+<p align="center">
+  <img src="Image/image.png" alt="5010 3-DOF FOC kinematic chain hardware and RViz model" width="900">
+</p>
 
-> **Demo video:** [Coming soon — hardware trajectory, RViz synchronization, safety stop, and support tests](https://youtu.be/VIDEO_ID)
+## At a glance
+
+| Area | Details |
+| --- | --- |
+| Actuation | Three 5010 FOC joints over CAN at 1 Mbps |
+| Main controller | STM32H723, 1 kHz outer loop, safety state machine, UART control |
+| Encoder node | STM32G030 with AS5047P output encoder and foot switch |
+| Host tools | Python IK trajectories, UART console, ROS 2 `JointState`, RViz |
+| Control mode | Bounded joint-space PD with torque caps and watchdogs |
+
+## Project map
+
+- [STM32-H723 firmware](STM32-H723/): CAN motor control, safety, PD, UART, IMU, and status LED support
+- [G030 encoder firmware](G030-second-encoder/): output encoder and foot-switch telemetry
+- [Python kinematics](linux/IK/): forward/inverse kinematics and trajectory generation
+- [ROS 2 visualization](linux/leg_ros2_rviz/): URDF, launch files, and RViz configuration
+- [CAD assembly](3D%20Model/Let-Assembly.step): mechanical model
 
 ## What is demonstrated
 
@@ -34,7 +53,8 @@ flowchart LR
     H723 <-->|"FDCAN1 · 1 Mbps"| M3["FOC joint 2"]
     G030["STM32G030\nAS5047P + foot switch"] -->|"UART telemetry"| H723
     PC -->|"JointState"| RViz["ROS 2 / RViz"]
-````
+
+```
 
 ## Repository layout
 
@@ -51,7 +71,15 @@ Image/
 └── image.png              Project photo used above
 ```
 
-## Quick demonstration
+## Quick start
+
+### Prerequisites
+
+- Linux with Python 3 and a configured serial port
+- ROS 2 with RViz, if visualization is needed
+- A mechanically supported leg with verified encoder direction and limits
+
+Install the Python dependencies used by the trajectory tools according to your Linux environment, then run the example from `linux/IK/`.
 
 1. Place the leg in its straight, mechanically supported ZERO pose.
 2. Start RViz on Linux.
@@ -59,9 +87,10 @@ Image/
 4. Observe measured joint angles in RViz while the H723 retains safety authority.
 5. Press `Ctrl-C` at any time: the runner sends `DISARM`, then `POWER OFF`.
 
-Example:
+Example trajectory:
 
 ```bash
+cd linux/IK
 python3 run_leg_trajectory.py --port /dev/ttyACM0 \
   --motion vertical \
   --vertical-up-mm 20 --vertical-down-mm 15 \
@@ -70,6 +99,8 @@ python3 run_leg_trajectory.py --port /dev/ttyACM0 \
 ```
 
 The trajectory returns to `SET 0 0 0`, actively holds the ZERO pose for 60 seconds, then disarms. Use `Ctrl-C` to stop early.
+
+For the UART command console, see [`linux/pc_pd_poc.py`](linux/pc_pd_poc.py). For ROS 2 setup and launch instructions, see [`linux/leg_ros2_rviz/README.md`](linux/leg_ros2_rviz/README.md).
 
 ## Safety
 
@@ -91,15 +122,4 @@ This is an experimental high-torque robot actuator platform.
 
 ## License
 
-MIT
-
-````
-
-Two small actions after pasting:
-
-1. Make sure your image directory is exactly `Image` with capital `I`; GitHub paths are case-sensitive.
-2. Replace `VIDEO_ID` later with your YouTube ID, for example:
-
-```md
-https://youtu.be/abc123XYZ
-````
+This project is licensed under the [MIT License](LICENSE).
