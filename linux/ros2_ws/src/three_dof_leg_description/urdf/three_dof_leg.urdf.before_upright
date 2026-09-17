@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+  H723 three-FOC planar leg.
+  Coordinate frame: X forward, Z up.  At joint positions [0, 0, 0] all links
+  point down.  Joint values on /joint_states are kinematic values; the H723
+  status-to-URDF knee sign conversion happens in run_leg_trajectory.py.
+-->
+<robot name="three_dof_foc_leg">
+  <material name="dark"><color rgba="0.12 0.16 0.20 1"/></material>
+  <material name="orange"><color rgba="1.0 0.35 0.05 1"/></material>
+  <material name="grey"><color rgba="0.45 0.45 0.48 1"/></material>
+
+  <link name="base_link">
+    <visual><geometry><box size="0.10 0.07 0.02"/></geometry><material name="dark"/></visual>
+  </link>
+
+  <link name="thigh_link">
+    <visual>
+      <origin xyz="0 0 -0.05"/>
+      <geometry><cylinder radius="0.012" length="0.10"/></geometry>
+      <material name="orange"/>
+    </visual>
+  </link>
+  <joint name="hip_joint" type="revolute">
+    <parent link="base_link"/><child link="thigh_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="-1.0472" upper="1.0472" effort="1.0" velocity="10.0"/>
+  </joint>
+
+  <link name="shank_link">
+    <visual>
+      <origin xyz="0 0 -0.05"/>
+      <geometry><cylinder radius="0.011" length="0.10"/></geometry>
+      <material name="dark"/>
+    </visual>
+  </link>
+  <joint name="knee_joint" type="revolute">
+    <parent link="thigh_link"/><child link="shank_link"/>
+    <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="-1.2217" upper="1.2217" effort="1.0" velocity="10.0"/>
+  </joint>
+
+  <link name="foot_link">
+    <visual>
+      <origin xyz="0.020 0 -0.0325"/>
+      <geometry><box size="0.080 0.070 0.065"/></geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+  <joint name="ankle_joint" type="revolute">
+    <parent link="shank_link"/><child link="foot_link"/>
+    <origin xyz="0 0 -0.10" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="-1.0472" upper="1.0472" effort="1.0" velocity="10.0"/>
+  </joint>
+</robot>

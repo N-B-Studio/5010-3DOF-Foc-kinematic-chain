@@ -1,0 +1,16 @@
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:136:6:HAL_PWREx_EnableBatteryCharging	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:151:6:HAL_PWREx_DisableBatteryCharging	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:425:6:HAL_PWREx_EnableInternalWakeUpLine	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:434:6:HAL_PWREx_DisableInternalWakeUpLine	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:458:19:HAL_PWREx_EnableGPIOPullUp	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:520:19:HAL_PWREx_DisableGPIOPullUp	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:582:19:HAL_PWREx_EnableGPIOPullDown	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:644:19:HAL_PWREx_DisableGPIOPullDown	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:697:6:HAL_PWREx_EnablePullUpPullDownConfig	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:708:6:HAL_PWREx_DisablePullUpPullDownConfig	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:748:6:HAL_PWREx_EnableFlashPowerDown	16	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:766:6:HAL_PWREx_DisableFlashPowerDown	16	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:780:10:HAL_PWREx_GetVoltageRange	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:806:19:HAL_PWREx_ControlVoltageScaling	24	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:847:6:HAL_PWREx_EnableLowPowerRunMode	8	static
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.c:862:19:HAL_PWREx_DisableLowPowerRunMode	16	static

@@ -1,0 +1,15 @@
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:152:19:HAL_DMA_Init	5
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:259:19:HAL_DMA_DeInit	4
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:382:19:HAL_DMA_Start	3
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:433:19:HAL_DMA_Start_IT	6
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:507:19:HAL_DMA_Abort	4
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:572:19:HAL_DMA_Abort_IT	4
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:637:19:HAL_DMA_PollForTransfer	13
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:797:6:HAL_DMA_IRQHandler	12
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:903:19:HAL_DMA_RegisterCallback	9
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:954:19:HAL_DMA_UnRegisterCallback	8
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1031:22:HAL_DMA_GetState	1
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1043:10:HAL_DMA_GetError	1
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1070:13:DMA_SetConfig	3
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1117:13:DMA_CalcDMAMUXChannelBaseAndMask	1
+C:/Users/10504/STM32Cube/Repository/STM32Cube_FW_G0_V1.6.3/Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_dma.c:1163:13:DMA_CalcDMAMUXRequestGenBaseAndMask	1
