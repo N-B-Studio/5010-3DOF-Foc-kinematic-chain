@@ -12,6 +12,10 @@ This project demonstrates a complete hardware-to-ROS 2 control path: distributed
   <img src="Image/image.png" alt="5010 3-DOF FOC kinematic chain hardware and RViz model" width="900">
 </p>
 
+Videio:
+ - YouTube: TODO
+ - 哔哩哔哩: https://www.bilibili.com/video/BV1ziem6XE5T/?vd_source=20101db79b24d6ef5e1b776806b05fad
+
 ## At a glance
 
 | Area | Details |
